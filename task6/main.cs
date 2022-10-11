@@ -5,10 +5,10 @@ class main
     enum HTTPError
     {
         Bad_Request = 400,
-        Unauthorized = 401,
-        Payment_Required = 402,
-        Forbidden = 403,
-        Not_Found = 404
+        Unauthorized,
+        Payment_Required,
+        Forbidden,
+        Not_Found
 
     }
 
@@ -46,11 +46,12 @@ class main
 
 
         Console.WriteLine("Task 3");
-
-        Console.WriteLine((HTTPError).404);
+        int errCode;
+        errCode = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine((HTTPError)errCode);
         Console.ReadKey();
         Console.ReadLine();
-
+       
     }
 
 }
